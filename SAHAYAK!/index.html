@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAHAYAK | Emergency Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+
+            background: linear-gradient(
+                135deg,
+                #ff6a00,
+                #ff8c00,
+                #ffb347
+            );
+
+            display: flex;
+            flex-direction: column;
+
+            color: #222;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            width: 100%;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: rgba(255, 255, 255, 0.15);
+
+            backdrop-filter: blur(10px);
+
+            color: white;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* ================= MAIN ================= */
+
+        main {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px;
+        }
+
+        .emergency-card {
+            width: 100%;
+            max-width: 560px;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 24px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.20);
+        }
+
+        /* ================= TITLE ================= */
+
+        .card-title {
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+        .card-title h1 {
+            font-size: 32px;
+
+            color: #e65100;
+
+            margin-bottom: 10px;
+        }
+
+        .card-title p {
+            color: #666;
+
+            font-size: 15px;
+
+            line-height: 1.5;
+        }
+
+        /* ================= FORM ================= */
+
+        .form-group {
+            margin-top: 22px;
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: bold;
+
+            color: #333;
+        }
+
+        textarea {
+            width: 100%;
+
+            height: 120px;
+
+            padding: 15px;
+
+            border: 2px solid #eee;
+
+            border-radius: 12px;
+
+            resize: vertical;
+
+            font-size: 15px;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+        textarea:focus {
+            border-color: #ff6a00;
+
+            box-shadow:
+                0 0 0 3px rgba(255, 106, 0, 0.10);
+        }
+
+        /* ================= VOICE ================= */
+
+        .voice-box {
+            background: #fff7ed;
+
+            border: 2px dashed #ff9800;
+
+            border-radius: 14px;
+
+            padding: 18px;
+
+            text-align: center;
+        }
+
+        .voice-btn {
+            border: none;
+
+            padding: 14px 22px;
+
+            border-radius: 10px;
+
+            background: #ff6a00;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .voice-btn:hover {
+            background: #e65100;
+
+            transform: translateY(-2px);
+        }
+
+        .voice-status {
+            margin-top: 10px;
+
+            font-size: 14px;
+
+            color: #777;
+        }
+
+        /* ================= PHOTO ================= */
+
+        input[type="file"] {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 2px dashed #ff8c00;
+
+            border-radius: 12px;
+
+            background: #fff8f0;
+
+            cursor: pointer;
+        }
+
+        /* ================= LOCATION ================= */
+
+        .location-box {
+            display: flex;
+
+            gap: 12px;
+
+            align-items: center;
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            background: #fff7ed;
+
+            border: 1px solid #ffd7aa;
+        }
+
+        .location-btn {
+            border: none;
+
+            padding: 10px 15px;
+
+            border-radius: 8px;
+
+            background: #ff8c00;
+
+            color: white;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .location-btn:hover {
+            background: #e65100;
+        }
+
+        .location-status {
+            color: #777;
+
+            font-size: 14px;
+        }
+
+        /* ================= REPORT BUTTON ================= */
+
+        .report-btn {
+            width: 100%;
+
+            margin-top: 30px;
+
+            padding: 17px;
+
+            border: none;
+
+            border-radius: 14px;
+
+            background: #e65100;
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 8px 20px rgba(230, 81, 0, 0.30);
+        }
+
+        .report-btn:hover {
+            background: #bf360c;
+
+            transform: translateY(-2px);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+
+            padding: 18px;
+
+            color: white;
+
+            font-size: 13px;
+
+            background: rgba(0, 0, 0, 0.10);
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            .logo {
+                font-size: 25px;
+            }
+
+            .tagline {
+                display: none;
+            }
+
+            .emergency-card {
+                padding: 25px;
+
+                border-radius: 18px;
+            }
+
+            .card-title h1 {
+                font-size: 27px;
+            }
+
+            .location-box {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .location-btn {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            SAHAYAK
+        </div>
+
+        <div class="tagline">
+            AI-Powered Emergency Intelligence
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <div class="emergency-card">
+
+            <div class="card-title">
+
+                <h1>🚨 Report an Emergency</h1>
+
+                <p>
+                    Speak, type or upload information about the emergency.
+                    Sahayak will organize the information for responders.
+                </p>
+
+            </div>
+
+
+            <!-- ================= VOICE ================= -->
+
+            <div class="form-group">
+
+                <label>
+                    🎤 Voice Assistance
+                </label>
+
+                <div class="voice-box">
+
+                    <button
+                        type="button"
+                        class="voice-btn"
+                        id="voiceBtn">
+
+                        🎤 Speak Emergency
+
+                    </button>
+
+                    <div
+                        class="voice-status"
+                        id="voiceStatus">
+
+                        Tap the button and describe what happened.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TEXT ================= -->
+
+            <div class="form-group">
+
+                <label for="description">
+                    📝 Describe the Emergency
+                </label>
+
+                <textarea
+                    id="description"
+                    placeholder="What happened? Where are you? Is anyone injured or trapped?">
+                </textarea>
+
+            </div>
+
+
+            <!-- ================= PHOTO ================= -->
+
+            <div class="form-group">
+
+                <label for="photo">
+                    📸 Upload Emergency Photo
+                </label>
+
+                <input
+                    type="file"
+                    id="photo"
+                    accept="image/*">
+
+            </div>
+
+
+            <!-- ================= LOCATION ================= -->
+
+            <div class="form-group">
+
+                <label>
+                    📍 Your Location
+                </label>
+
+                <div class="location-box">
+
+                    <button
+                        type="button"
+                        class="location-btn"
+                        id="locationBtn">
+
+                        Get Location
+
+                    </button>
+
+                    <span
+                        class="location-status"
+                        id="locationStatus">
+
+                        Location not captured
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= REPORT ================= -->
+
+            <button
+                type="button"
+                class="report-btn"
+                id="reportBtn">
+
+                🚨 REPORT EMERGENCY
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        SAHAYAK © 2026 | Emergency Intelligence Platform
+        <script src="script.js"></script>
+    </footer>
+
+</body>
+
+</html>

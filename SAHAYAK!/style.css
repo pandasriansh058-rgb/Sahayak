@@ -1,0 +1,466 @@
+/* =====================================================
+   SAHAYAK - Emergency Intelligence Platform
+   Main Stylesheet
+   ===================================================== */
+
+
+/* =========================
+   GLOBAL RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+   ========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #ff6a00,
+        #ff8c00,
+        #ffb347
+    );
+
+    color: #222;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    width: 100%;
+
+    padding: 20px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+}
+
+
+/* SAHAYAK LOGO */
+
+.logo {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* HEADER TAGLINE */
+
+.tagline {
+    font-size: 14px;
+
+    opacity: 0.9;
+}
+
+
+/* =========================
+   MAIN
+   ========================= */
+
+main {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   EMERGENCY CARD
+   ========================= */
+
+.emergency-card {
+    width: 100%;
+
+    max-width: 560px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================
+   CARD TITLE
+   ========================= */
+
+.card-title {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.card-title h1 {
+    font-size: 32px;
+
+    color: #e65100;
+
+    margin-bottom: 10px;
+}
+
+
+.card-title p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FORM GROUP
+   ========================= */
+
+.form-group {
+    margin-top: 22px;
+}
+
+
+/* =========================
+   LABELS
+   ========================= */
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+
+/* =========================
+   TEXTAREA
+   ========================= */
+
+textarea {
+    width: 100%;
+
+    height: 120px;
+
+    padding: 15px;
+
+    border: 2px solid #eee;
+
+    border-radius: 12px;
+
+    resize: vertical;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+textarea:focus {
+    border-color: #ff6a00;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 106, 0, 0.10);
+}
+
+
+/* =========================
+   VOICE SECTION
+   ========================= */
+
+.voice-box {
+    background: #fff7ed;
+
+    border: 2px dashed #ff9800;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    text-align: center;
+}
+
+
+/* VOICE BUTTON */
+
+.voice-btn {
+    border: none;
+
+    padding: 14px 22px;
+
+    border-radius: 10px;
+
+    background: #ff6a00;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.voice-btn:hover {
+    background: #e65100;
+
+    transform: translateY(-2px);
+}
+
+
+.voice-btn:active {
+    transform: translateY(0);
+}
+
+
+/* VOICE STATUS */
+
+.voice-status {
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    color: #777;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   FILE UPLOAD
+   ========================= */
+
+input[type="file"] {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 2px dashed #ff8c00;
+
+    border-radius: 12px;
+
+    background: #fff8f0;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   LOCATION SECTION
+   ========================= */
+
+.location-box {
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: #fff7ed;
+
+    border: 1px solid #ffd7aa;
+}
+
+
+/* LOCATION BUTTON */
+
+.location-btn {
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    background: #ff8c00;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.location-btn:hover {
+    background: #e65100;
+
+    transform: translateY(-1px);
+}
+
+
+/* LOCATION STATUS */
+
+.location-status {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   REPORT BUTTON
+   ========================= */
+
+.report-btn {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 17px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #e65100;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 20px rgba(230, 81, 0, 0.30);
+}
+
+
+.report-btn:hover {
+    background: #bf360c;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(191, 54, 12, 0.35);
+}
+
+
+.report-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+
+    padding: 18px;
+
+    color: white;
+
+    font-size: 13px;
+
+    background: rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+
+    .logo {
+        font-size: 25px;
+    }
+
+
+    .tagline {
+        display: none;
+    }
+
+
+    .emergency-card {
+        padding: 25px;
+
+        border-radius: 18px;
+    }
+
+
+    .card-title h1 {
+        font-size: 27px;
+    }
+
+
+    .location-box {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .location-btn {
+        width: 100%;
+    }
+
+
+    .voice-btn {
+        width: 100%;
+    }
+
+}
